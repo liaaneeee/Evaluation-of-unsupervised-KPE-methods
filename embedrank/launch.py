@@ -31,14 +31,14 @@ def extract_keyphrases(embedding_distrib, ptagger, raw_text, N, lang, beta=0.55,
 
 def load_local_embedding_distributor():
     config_parser = ConfigParser()
-    config_parser.read('/Users/liane/Documents/Uni/8.Semester/Bachelorarbeit/Notizen/AP2 - Intrinsische Evaluation/Intrinsische Evaluation/ai-research-keyphrase-extraction/config.ini')
+    config_parser.read('ai-research-keyphrase-extraction/config.ini')
     sent2vec_model_path = config_parser.get('SENT2VEC', 'model_path')
     return EmbeddingDistributorLocal(sent2vec_model_path)
 
 
 def load_local_corenlp_pos_tagger():
     config_parser = ConfigParser()
-    config_parser.read('/Users/liane/Documents/Uni/8.Semester/Bachelorarbeit/Notizen/AP2 - Intrinsische Evaluation/Intrinsische Evaluation/ai-research-keyphrase-extraction/config.ini')
+    config_parser.read('ai-research-keyphrase-extraction/config.ini')
     host = config_parser.get('STANFORDCORENLPTAGGER', 'host')
     port = config_parser.get('STANFORDCORENLPTAGGER', 'port')
     return PosTaggingCoreNLP(host, port)
