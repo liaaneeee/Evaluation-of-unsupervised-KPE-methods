@@ -31,7 +31,7 @@ If you choose **Option 2** (see options above), you need to run the `embedrank/e
     - `data/` - Contains the train and test documents of the SemEval 2010 datasets as TXT-files as well as two TXT-files listing the order of the documents from the Hugging Face version of the dataset (EmbedRank requires Python 3.6 while the Hugging Face datasets library requires Python 3.7+ )
 
 
-- `pke` - Contains the code for performing Keyphrase extraction with KPMiner & EmbedRank using the Python-based library [PKE](https://github.com/boudinfl/pke) for Keyphrase extraction; also contains the main experiments for hyperparameter tuning and the evaluation of the three KPE models.
+- `pke/` - Contains the code for performing Keyphrase extraction with KPMiner & EmbedRank using the Python-based library [PKE](https://github.com/boudinfl/pke) for Keyphrase extraction; also contains the main experiments for hyperparameter tuning and the evaluation of the three KPE models.
 
     - `hyperparameter_tuning.ipynb` - A Jupyter notebook containing experiments for hyperparameter tuning 
     - `evaluation.ipynb` - A jupyter notebook containing the main experiments for the evaluation
@@ -39,7 +39,7 @@ If you choose **Option 2** (see options above), you need to run the `embedrank/e
     - `df-semeval2010.tsv.gz` - This file is taken from the [PKE repository](https://github.com/boudinfl/pke) and belongs to the authors of this repository; the file contains document frequencies learned from SemEval 2010 required for the computation of Tf-idf by KPMiner
 
 
-- `extractions` - Contains the serialized extracted keyphrases obtained from KPMiner, MPRank and EmbedRank during the experiments in JSON; you can simply deserialize these extractions in order to compute the results for the experiments without performing the extractions yourself
+- `extractions/` - Contains the serialized extracted keyphrases obtained from KPMiner, MPRank and EmbedRank during the experiments in JSON; you can simply deserialize these extractions in order to compute the results for the experiments without performing the extractions yourself
 
 
 ## Required packages
