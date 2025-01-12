@@ -3,7 +3,10 @@ from sentence_transformers import CrossEncoder
 MODEL = CrossEncoder("cross-encoder/stsb-roberta-base")
 
 
-def exact_f1(extracted, references): # name modified
+# Please note
+# Implementation is from https://github.com/NC0DER/KeyphraseExtraction/blob/main/KeyExt/metrics.py
+# and was slightly modified (Combined with overlap coefficient, threshold of 0.5)
+def exact_f1(extracted, references): 
     """Function to compute exact match F-score for a list of extracted keyphrases and a reference list"""
     P = len(set(extracted) & set(references)) / len(extracted)
     R = len(set(extracted) & set(references)) / len(references)
@@ -11,12 +14,13 @@ def exact_f1(extracted, references): # name modified
     return F # modified
 
 
-# Function taken from https://github.com/NC0DER/KeyphraseExtraction/blob/main/KeyExt/metrics.py
-# Modified! (Combined with overlap coefficient, threshold of 0.5)
-
 def overlap(A: set, B: set):
     return len(A & B) / min(len(A), len(B))
 
+
+# Please note!
+# Implementation is from https://github.com/NC0DER/KeyphraseExtraction/blob/main/KeyExt/metrics.py
+# and was modified (Combined with overlap coefficient, threshold of 0.5)
 def partial_f1(extracted, references): # name modified
     """
     Computes the exatch match f1 measure at k.

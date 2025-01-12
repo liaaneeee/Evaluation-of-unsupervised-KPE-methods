@@ -16,8 +16,8 @@ This repository contains serialized keyphrase extractions from the three models 
 ### Which files do I need for running the experiments?
 
 The experiments for hyperparameter tuning and the evaluation of KPMiner, MPRank and EmbedRank are in the following two Jupyter notebooks:
-- 1. `pke/hyperparameter_tuning.ipynb`
-- 2. `pke/evaluation.ipynb`
+1. `experiments/hyperparameter_tuning.ipynb`
+2. `experiments/evaluation.ipynb`
 
 
 If you choose **Option 2** (see options above), you need to run the `embedrank/embedrank_extraction.ipynb` notebook first before running the above notebooks in order to obtain the keyphrase extractions from EmbedRank. 
@@ -31,7 +31,7 @@ If you choose **Option 2** (see options above), you need to run the `embedrank/e
     - `data/` - Contains the train and test documents of the SemEval 2010 datasets as TXT-files as well as two TXT-files listing the order of the documents from the Hugging Face version of the dataset (EmbedRank requires Python 3.6 while the Hugging Face datasets library requires Python 3.7+ )
 
 
-- `pke/` - Contains the code for performing Keyphrase extraction with KPMiner & EmbedRank using the Python-based library [PKE](https://github.com/boudinfl/pke) for Keyphrase extraction; also contains the main experiments for hyperparameter tuning and the evaluation of the three KPE models.
+- `experiments/` - Contains the code for performing Keyphrase extraction with KPMiner & EmbedRank using the Python-based library [PKE](https://github.com/boudinfl/pke) for Keyphrase extraction; also contains the main experiments for hyperparameter tuning and the evaluation of the three KPE models.
 
     - `hyperparameter_tuning.ipynb` - A Jupyter notebook containing experiments for hyperparameter tuning 
     - `evaluation.ipynb` - A jupyter notebook containing the main experiments for the evaluation
@@ -45,7 +45,7 @@ If you choose **Option 2** (see options above), you need to run the `embedrank/e
 ## Required packages
 
 ### 1. Set up a virtual environment with Python 3.11:
-- Required for running the notebooks in the `pke/`-directory 
+- Required for running the notebooks in the `experiments/`-directory 
 
 1. Create a venv with **Python 3.11** and make sure to activate it 
 
